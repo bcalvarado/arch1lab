@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "bst.h"
 #include <stdlib.h>
-/*int main(){
+int main(){
 
   printf("In main\n");
   /*
@@ -23,9 +23,11 @@
   fclose(filePtr);
   
   printf("Hello world\n");
-  
-  struct Node* root = NULL;
+*/
+  struct Node* root;
+  root = NULL;
   root = insertNode(root,3);
   root = insertNode(root,4);
+  root = insertNode(root,7);
   printAll(root);
-  };*/
+  };

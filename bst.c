@@ -3,7 +3,6 @@
 #include <malloc.h>
 #include <string.h>
 
-
 typedef struct Node{
   // char name[60];
   int data;
@@ -16,7 +15,7 @@ typedef struct Node{
 
 
 
-Node* createNode(int data){
+struct Node* createNode(int data){
   Node* newNode = (Node*)malloc(sizeof(Node));
   newNode->data = data;
   newNode->leftChild = NULL;
@@ -29,42 +28,45 @@ Node* createNode(int data){
 
 //Node* root;
 struct Node* insertNode(struct Node* root, int data){
-  printf("In insertNode\n");
+  //printf("In insertNode\n");
     if(root == NULL){
-      printf("first\n");
+      //printf("first\n");
       root = createNode(data);
       //return root;
     }
     else if(data < root->data) {
-      printf("second\n");
+      //printf("second\n");
       root->leftChild = insertNode(root->leftChild, data);
     }
     else{
-      printf("third\n");
+      //printf("third\n");
       root->rightChild = insertNode(root->rightChild, data);
     }
     return root;
 };
 
-int main(){
-printf("Hello\n");
-struct Node* root = NULL;
-root = insertNode(root,3);
-root = insertNode(root,4);
- root = insertNode(root,5);
-//printAll(root);
-};
+//int main(){
+  //printf("Hello\n");
+//struct Node* root = NULL;
+//root = insertNode(root,3);
+//root = insertNode(root,4);
+//root = insertNode(root,5);
+ //printAll(root);
+//};
 
 //delete(Node n, String name){
 
 //}
 
-void printAll(struct Node* n){
-    printf("In printAll\n");
+    void printAll(struct Node* n){
+      //printf("In printAll\n");
     if(n!=NULL){
     printAll(n->leftChild);
     printf("%d\n", n->data);
     printAll(n->rightChild);
     }
-    printf("%d\n", n->data);
- }
+    //else{
+      //printf("Only one");
+      //printf("%d\n", n->data);
+      //}
+}

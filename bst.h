@@ -7,11 +7,14 @@ struct Node{
   //char *str;
 }Node;
 
-void insertNode(struct Node *node, int name);
 
-void delete(struct Node *n, int name);
+struct Node* createNode(int data);
 
-void printAll(struct Node *n);
+struct Node* insertNode(struct Node* root, int data);
+
+//void delete(struct Node *n, int name);
+
+void printAll(struct Node* n);
 
 
 
