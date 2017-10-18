@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "bst.h"
 #include <stdlib.h>
-int main(){
+/*int main(){
 
-  printf("Hello\n");
+  printf("In main\n");
   /*
   FILE *filePtr;
   char fileName[15];
@@ -23,11 +23,9 @@ int main(){
   fclose(filePtr);
   
   printf("Hello world\n");
-  */
-  struct Node *root = NULL;
-  //printf("it worked\n");
-  insertNode(root,3);
-  insertNode(root,4);
-  //printf("\n");
+  
+  struct Node* root = NULL;
+  root = insertNode(root,3);
+  root = insertNode(root,4);
   printAll(root);
-  };
+  };*/
